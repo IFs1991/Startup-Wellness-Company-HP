@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Layout from './components/layout'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import { Rocket, BarChart2, Globe } from 'lucide-react'
@@ -8,21 +7,20 @@ import AnimatedChart from './components/animated-chart'
 
 export default function Home() {
   return (
-    <Layout>
-      <section className="min-h-screen flex items-center justify-center text-center 
-        relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 to-blue-950 text-white">
+      <section className="min-h-screen flex items-center justify-center text-center relative overflow-hidden">
         <AnimatedBackground />
         <div className="absolute inset-0">
-          <div className="absolute w-96 h-96 bg-blue-500 rounded-full blur-3xl 
+          <div className="absolute w-96 h-96 bg-blue-500 rounded-full blur-3xl
             animate-[float_8s_ease-in-out_infinite] top-1/4 -left-48 opacity-20" />
-          <div className="absolute w-96 h-96 bg-purple-500 rounded-full blur-3xl 
+          <div className="absolute w-96 h-96 bg-purple-500 rounded-full blur-3xl
             animate-[float_12s_ease-in-out_infinite] bottom-1/4 -right-48 opacity-20" />
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-20">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-left">
-              <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-8 
+              <h1 className="text-5xl md:text-7xl font-light tracking-tight mb-8
                 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
                 投資価値を高める、
                 <br />
@@ -33,7 +31,7 @@ export default function Home() {
                 次世代のユニコーン企業創出をサポート
               </p>
               <Link href="/contact" passHref>
-                <Button 
+                <Button
                   className="text-lg px-8 py-6 bg-white/10 backdrop-blur-md hover:bg-white/20
                     border border-white/20 rounded-full transition-all duration-300
                     hover:tracking-wider group"
@@ -64,7 +62,7 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-3 gap-12">
             {[
-              { title: "スタートアップに特化", icon: Rocket },
+              { title: "スター��アップに特化", icon: Rocket },
               { title: "データドリブン", icon: BarChart2 },
               { title: "グローバル基準", icon: Globe }
             ].map((item, index) => (
@@ -137,7 +135,7 @@ export default function Home() {
         </div>
       </div>
     </section>
-    </Layout>
+    </div>
   )
 }
 
